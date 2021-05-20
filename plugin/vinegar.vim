@@ -109,7 +109,9 @@ function! s:setup_vinegar() abort
       let s:netrw_up = ''
     endif
   endif
-  nmap <buffer> - <Plug>VinegarUp
+  " Thanks, but I'd like to define this mapping myself
+  " -- huangzonghao Thu Feb 04 22:51:50 EST 2021
+  " nmap <buffer> - <Plug>VinegarUp
   cnoremap <buffer><expr> <Plug><cfile> get(<SID>relatives('.'),0,"\022\006")
   if empty(maparg('<C-R><C-F>', 'c'))
     cmap <buffer> <C-R><C-F> <Plug><cfile>
